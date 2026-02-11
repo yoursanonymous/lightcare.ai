@@ -1,12 +1,116 @@
-.card {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  margin-bottom: 16px;
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  color: #F9FAFB;
 }
 
-.card-title {
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
   font-weight: 600;
+  color: #E5E7EB;
+}
+
+.see-all {
+  font-size: 13px;
+  color: #2DD4BF;
+  cursor: pointer;
+}
+
+/* Biomarkers Card */
+.biomarkers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.biomarker-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.biomarker-icon {
+  font-size: 20px;
+}
+
+.biomarker-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.biomarker-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #CBD5E1;
+}
+
+.status-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dot.active {
+  background: #2DD4BF;
+  box-shadow: 0 0 8px rgba(45, 212, 191, 0.5);
+}
+
+/* Insights Card */
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insight-item {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.insight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 8px;
+}
+
+.insight-title {
+  font-weight: 500;
+  color: #E5E7EB;
+}
+
+.insight-trend {
+  font-weight: bold;
+}
+
+.insight-description {
+  margin: 0;
+  font-size: 13px;
+  color: #9CA3AF;
+  line-height: 1.5;
 }

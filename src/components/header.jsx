@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/header.css";
 
-const Header = () => {
+const Header = ({ currentTab, onTabChange }) => {
     const token = getToken();
     const navigate = useNavigate();
+
+    const tabs = ["Today", "Insights", "Profile", "Biomarkers", "Records", "Sources"];
 
     function handleLogout() {
         removeToken();
@@ -17,12 +19,15 @@ const Header = () => {
             <div className="header-left">
                 <h1 className="header-logo">LightCare.AI</h1>
                 <ul className="header-nav">
-                    <li>Today</li>
-                    <li>Insights</li>
-                    <li className="active">Profile</li>
-                    <li>Biomarkers</li>
-                    <li>Records</li>
-                    <li>Sources</li>
+                    {tabs.map((tab) => (
+                        <li 
+                            key={tab}
+                            className={currentTab === tab ? "active" : ""}
+                            onClick={() => onTabChange(tab)}
+                        >
+                            {tab}
+                        </li>
+                    ))}
                 </ul>
             </div>
 

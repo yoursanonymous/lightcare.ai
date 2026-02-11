@@ -2,29 +2,27 @@ import "../styles/card.css";
 
 export default function UploadCard() {
   return (
-    <div className="card">
-      <div className="card-title">Add Medical Record</div>
-
-      <p style={{ fontSize: "14px", color: "#6b7280" }}>
-        Upload lab reports, prescriptions, or visit documents.
-      </p>
+    <div className="glass-card">
+      <div className="card-header">
+        <h3>Upload Medical Record</h3>
+      </div>
 
       <div
         style={{
-          border: "2px dashed #d1d5db",
-          borderRadius: "8px",
-          padding: "24px",
+          border: "2px dashed rgba(255,255,255,0.1)",
+          borderRadius: "12px",
+          padding: "32px",
           textAlign: "center",
-          marginTop: "12px"
+          color: "#9CA3AF",
+          cursor: "pointer",
+          transition: "all 0.2s ease"
         }}
+        onMouseOver={(e) => (e.currentTarget.style.borderColor = "#2DD4BF")}
+        onMouseOut={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
       >
-        <p style={{ marginBottom: "12px" }}>
-          Drag and drop files here
-        </p>
-        <p style={{ marginBottom: "12px" }}>or</p>
-        <button disabled style={{ opacity: 0.6 }}>
-          Upload (Coming Soon)
-        </button>
+        <div style={{ fontSize: "24px", marginBottom: "8px" }}>📁</div>
+        <p style={{ margin: 0 }}>Click or drag file to upload</p>
+        <span style={{ fontSize: "12px", opacity: 0.6 }}>PDF, PNG, JPG accepted</span>
       </div>
     </div>
   );

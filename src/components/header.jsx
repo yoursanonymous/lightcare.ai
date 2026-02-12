@@ -17,7 +17,7 @@ const Header = ({ currentTab, onTabChange }) => {
         <div className="header-container">
             {/* Logo Section */}
             <div className="header-left">
-                <h1 className="header-logo">LightCare.AI</h1>
+                <h1 className="header-logo">LightCare<span>.AI</span></h1>
                 <ul className="header-nav">
                     {tabs.map((tab) => (
                         <li 

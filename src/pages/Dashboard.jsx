@@ -85,18 +85,41 @@ export default function Dashboard() {
   return (
     <div
       style={{
-        maxWidth: "1200px",
-        margin: "0 auto",
-        padding: "32px 16px",
         minHeight: "100vh",
-        background: "#06121C",
-        color: "#F9FAFB"
+        backgroundImage: "url('/heart.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        position: "relative",
+        overflow: "hidden",
+        backgroundColor: "#06121C" // Fallback
       }}
     >
-      <Header currentTab={activeTab} onTabChange={setActiveTab} />
-      
-      <div style={{ marginTop: "32px" }}>
-        {renderView()}
+      {/* DARK OVERLAY */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(180deg, rgba(6,18,28,0.75) 0%, rgba(6,18,28,0.85) 100%)",
+          zIndex: 0,
+        }}
+      />
+
+      <div
+        style={{
+          position: "relative",
+          zIndex: 1,
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "32px 16px",
+          color: "#F9FAFB"
+        }}
+      >
+        <Header currentTab={activeTab} onTabChange={setActiveTab} />
+        
+        <div style={{ marginTop: "32px" }}>
+          {renderView()}
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,16 @@
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
   padding: 24px;
   margin-bottom: 24px;
   color: #F9FAFB;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(20, 184, 166, 0.3);
 }
 
 .card-header {
@@ -20,18 +25,25 @@
   font-size: 18px;
   font-weight: 600;
   color: #E5E7EB;
+  letter-spacing: -0.01em;
 }
 
 .see-all {
   font-size: 13px;
-  color: #2DD4BF;
+  color: #14B8A6;
   cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.see-all:hover {
+  color: #2DD4BF;
 }
 
 /* Biomarkers Card */
 .biomarkers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 16px;
 }
 
@@ -39,10 +51,15 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s ease;
+}
+
+.biomarker-item:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .biomarker-icon {
@@ -52,13 +69,15 @@
 .biomarker-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .biomarker-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: #CBD5E1;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .status-dots {
@@ -67,15 +86,15 @@
 }
 
 .dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
 
 .dot.active {
-  background: #2DD4BF;
-  box-shadow: 0 0 8px rgba(45, 212, 191, 0.5);
+  background: #14B8A6;
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.6);
 }
 
 /* Insights Card */
@@ -87,9 +106,9 @@
 
 .insight-item {
   padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .insight-header {
@@ -102,6 +121,7 @@
 .insight-title {
   font-weight: 500;
   color: #E5E7EB;
+  font-size: 14px;
 }
 
 .insight-trend {
